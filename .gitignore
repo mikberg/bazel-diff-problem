@@ -1,1 +1,3 @@
 bazel-*
+
+!bazel-diff-example.sh

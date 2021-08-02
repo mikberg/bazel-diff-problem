@@ -37,3 +37,13 @@ go_repository(
 )
 
 # Add a comment
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_jar")
+
+http_jar(
+    name = "bazel_diff",
+    urls = [
+        "https://github.com/Tinder/bazel-diff/releases/download/3.2.0/bazel-diff_deploy.jar",
+    ],
+    sha256 = "8b17f499d1d1767b86ff0600504b46dea04101e639e94cc12aa9ab76b605179f",
+)
