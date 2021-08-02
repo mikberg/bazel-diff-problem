@@ -23,3 +23,11 @@ go_binary(
     embed = [":project_lib"],
     visibility = ["//visibility:public"],
 )
+
+load("@rules_java//java:defs.bzl", "java_binary")
+
+java_binary(
+    name = "bazel-diff",
+    main_class = "com.bazel_diff.BazelDiff",
+    runtime_deps = ["@bazel_diff//jar"],
+)
